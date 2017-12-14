@@ -1,6 +1,6 @@
 ## Regulation of Craving (ROC) task
 
-Code and stimuli for the regulation of craving task using in the SAN lab.
+Code and stimuli for the regulation of craving task used in DEV.
 
 Event information is specified in the `ROC_[].txt` files. Task information and paths are specified in the `runROC_[].m` files. The task runs using `MSS_RunMyMSS_ROC` and other scripts located in the `ROC/MSS` folder. If you need to modify the MSS code, modify the templates `Run_My_MSS.m` and `MSS_RunMyMSS`.
 
@@ -20,7 +20,7 @@ This script runs the scanner task. The variables and paths should be modified fo
 - Subject ID
 - Whether or not to use the MRI button box
 
-**`runROC_[run number]sbeh.m`**
+**`runROC_[run number]beh.m`**
 This script runs the behavioral task. The variables and paths should be modified for your study. User inputs include:
 - Subject ID
 - Whether or not to use the MRI button box

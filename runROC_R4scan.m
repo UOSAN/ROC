@@ -5,11 +5,11 @@
 % This script should be saved in your experiment folder at the first level.
 
 %% Define experiment variables
-expt.experiment_name='DEV ROC Task R2'; %Replace this with your experiment name
+expt.experiment_name='DEV ROC Task R4'; %Replace this with your experiment name
 expt.experiment_code='DEV'; %Replace this with a 3-4 letter code for your experiment
-expt.experiment_notes='This is code to run the DEV ROC Task R2 scan version'; %Add any pertinent notes here
+expt.experiment_notes='This is code to run the DEV ROC Task R4 scan version'; %Add any pertinent notes here
 expt.script_revision_date='12/13/2017'; %Replace with the date you last revised your script
-expt.tdfile='ROC_R2scan.txt'; %Replace with the name of your td file
+expt.tdfile='ROC_R4scan.txt'; %Replace with the name of your td file
 expt.resource_path='/Users/danicosme/Documents/code/sanlab/ROC/Resources'; %Replace with the path for your resource folder
 expt.output_folder='/Users/danicosme/Documents/code/sanlab/ROC/Output'; %Replace with the path for your output folder
 expt.default_start='scan_start.jpg'; %Replace if you'd like to use an image other than default_start.jpg
