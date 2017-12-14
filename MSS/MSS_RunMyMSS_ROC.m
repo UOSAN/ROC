@@ -342,7 +342,8 @@ save(output_filename,'run_info','key_presses');
 HideCursor;
 
 % Set up the onscreen window, and fill with black (0) (not white,255)
-Screen('Preference', 'Verbosity', 1);
+Screen('Preference', 'SkipSyncTests', 1); % use if VBL fails; use this setting on the laptop
+%Screen('Preference', 'Verbosity', 1);
 screens=Screen('Screens');
 screenNumber=max(screens);
 [w, rect]=Screen('OpenWindow', screenNumber,0,[],32,2);
