@@ -1,10 +1,13 @@
-function eatingStudy3_scan()
-
+%% Tidy and get working directory
 clear all
+studyDir = pwd;
 
-cwd = pwd;
-studyDir = '/users/sanlab/Desktop/Eating/CraveReappraise';    % Change me
-
+fprintf('The current directory is %s\n',studyDir)
+dirCheck = input('Is this the correct study directory (y/n)?  ', 's'); 
+if dirCheck ~= 'y'
+    studyDir = input('Please specify the full path to the correct study directory:  ', 's');
+end
+%% Select stimuli and populate folders
 categories = {'Chocolate' 'Cookies' 'Donuts' 'French Fries' 'Ice Cream' 'Pasta' 'Pizza'};
 nCategories = length(categories);
 
@@ -131,5 +134,4 @@ else    % Coin flip--other half of the time just copy the files into the Resourc
     if ~success
         fprintf('Error: %s on nocrave file.\n',msg);
     end
-    
 end
