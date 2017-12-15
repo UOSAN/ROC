@@ -1,137 +1,108 @@
-%% Tidy and get working directory
-clear all
-studyDir = pwd;
+%% runImages.m %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Author: Dani Cosme
+%
+% Description: This script selects food images based on their ratings,
+% randomizes them, and adds the images to the ROC/Resources folder
+% 
+% Inputs: Ratings .csv file in [path tbd] with the following name:
+%   [study][subject ID]_ratings.csv (e.g. DEV999_ratings.csv)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-fprintf('The current directory is %s\n',studyDir)
-dirCheck = input('Is this the correct study directory (y/n)?  ', 's'); 
-if dirCheck ~= 'y'
-    studyDir = input('Please specify the full path to the correct study directory:  ', 's');
-end
-%% Select stimuli and populate folders
-categories = {'Chocolate' 'Cookies' 'Donuts' 'French Fries' 'Ice Cream' 'Pasta' 'Pizza'};
-nCategories = length(categories);
+%% Housecleaning before the guests arrive
+pathtofile = mfilename('fullpath');
+homepath = pathtofile(1:(regexp(pathtofile,'runGetStim') - 1));
+addpath(homepath);
 
-mostCravedTrue = 'n';
-leastCravedTrue = 'n';
+cd(homepath);
+clear all; close all; Screen('CloseAll'); 
+homepath = [pwd '/'];
 
-while mostCravedTrue ~= 'y'
-        
-    fprintf('\n\nWhich category of food do you crave the MOST? \n');
-    fprintf('(Where "crave" means that you want it, like it, and would eat it if it were in front of you, even if you were full.)\n\n');
+%% Get study and subject id from user
+study = input('Study name:  ', 's');
+subjid = input('Subject number:  ', 's');
 
-    for i = 1:nCategories
-        fprintf('%2.0f - %s\n',i,categories{i});
-    end
+%% Specify number of craved and not craved images
+n_craved = 40;
+n_notcraved = 20;
 
-    mostCraved = input('\nPlease select a category: ');
-    fprintf('You selected %s. ', categories{mostCraved});
-    mostCravedTrue = input('Is that correct? (y/n): ','s');
+%% Load image info
+% Define subject input file
+subinput = sprintf('%sinput/%s%s_ratings.csv',homepath,study,subjid);
 
-end
-
-fprintf('\n\nGreat, let''s move on...\n\n');
-
-while leastCravedTrue ~= 'y'
-    
-    fprintf('\n\nWhich category of food do you crave the LEAST? \n');
-    fprintf('(Where "crave" means that you want it, like it, and would eat it if it were in front of you, even if you were full.)\n\n');
-    
-    for i = 1:nCategories
-        fprintf('%2.0f - %s\n',i,categories{i});
-    end
-
-    leastCraved = input('\nPlease select a category: ');
-    fprintf('You selected %s. ', categories{leastCraved});
-    leastCravedTrue = input('Is that correct? (y/n): ','s');
-
+% Load image rating info
+if exist(subinput)
+    fid=fopen(subinput);
+    imageinfo = textscan(fid, '%n%s%s', 'Delimiter', ',');
+    fclose(fid);
+else
+    error(sprintf('Subject input file (%s) does not exist',subinput));
 end
 
-fprintf('\n\nExcellent, thank you.\n\n\n');
+%% Check if there are enough stimuli for the number of trials specified
+if length(imageinfo{1,1}) < n_craved + n_notcraved
+    error('The number of stimuli available is less than the number of trials specified');
+end
 
-cd(studyDir)   %Make sure this works
+%% Remove old images
+% Remove current images from run directories
+disp('Removing files from run directories')
+delete(sprintf('%sResources/*crave*.jpg', homepath));
 
-craveDir = strcat('Crave_',num2str(mostCraved));        % Where are the craved food files (labeled as "Crave01.jpg", etc.)
-noCraveDir = strcat('NoCrave_',num2str(leastCraved));   % Where are the non-craved food files (labeled as "NoCrave01.jpg", etc.)
+%% Sort healthy foods into runs
+% Select healthy images
+ratings = imageinfo{1,1};
+idx = imageinfo{1,2};
+images = imageinfo{1,3};
 
-% Go into the Resources folder and remove all of the existing "crave##.jpg"
-% and "nocrave##.jpg" images
-cd('Resources')
-    delete *crave*.jpg
-cd('..')
+% Sort images by rating (ascending 1-4)
+[sortedvals, sortidx] = sort(ratings);
 
-if rand>0.5             % Coin flip--half of the time swap pics so not always using the same images for reappraise/view
-   
-    % Go into the crave directory, list the files, and figure out where
-    % everything lives
-    cd(craveDir)
-    craveFiles = dir('crave*.jpg');
-    prefixInd = strfind(craveFiles(1).name,'.');
-    prefix = craveFiles(1).name(1:prefixInd-3);
-    
-    % Loop through each file...
-    for j = 1:length(craveFiles)
-        
-        oldFileN = str2double(craveFiles(j).name(prefixInd-2:prefixInd-1));    % Original file number
-        
-        % If it is odd, add one; if even, subtract one
-        if mod(j,2) % odds
-            newFileN = oldFileN+1;
-        else %evens
-            newFileN = oldFileN-1;
-        end
-        
-        newFile = strcat(prefix,num2str(newFileN,'%02.0f'),'.jpg');         % The name of the new file
+% Check if there are enough trials with ratings 1-4 and exclude 0s
+sumtrials = sum(sortedvals > 0);
+deficit = (n_craved + n_notcraved) - sumtrials;
 
-        [success,msg] = copyfile(craveFiles(j).name,strcat('../Resources/',newFile),'f');       % Copy the new file to resources
-        if ~success
-            fprintf('Error: %s on crave file %2.0f\n',msg,j);
-        end
-                
-        WaitSecs(.01);
-    end
-    
-    cd('../')   % Back up to the main task directory
-    
-    % Go into the no-crave directory, list the files, and figure out where
-    % everything lives
-    cd(noCraveDir);
-    noCraveFiles = dir('nocrave*.jpg');
-    prefixInd = strfind(noCraveFiles(1).name,'.');
-    prefix = noCraveFiles(1).name(1:prefixInd-3);
-    
-    % Loop through each file...
-    for j = 1:length(noCraveFiles)
-        
-        oldFileN = str2double(noCraveFiles(j).name(prefixInd-2:prefixInd-1));  % Original file number
-        
-        % If it is odd, add one; if even, subtract one
-        if mod(j,2) % odds
-            newFileN = oldFileN+1;
-        else %evens
-            newFileN = oldFileN-1;
-        end
-        
-        newFile = strcat(prefix,num2str(newFileN,'%02.0f'),'.jpg');          % The name of the new file
+if deficit > 0
+    warning(sprintf('Too few images with ratings > 0. Including %d trials rated 0.', deficit));
+    sortedvals_g0 = sortedvals(end-(2*ntrials-1):end);
+    sortidx_g0 = sortidx(end-(2*ntrials-1):end);
+else
+    sortedvals_g0 = sortedvals(sortedvals > 0);
+    sortidx_g0 = sortidx(sortedvals > 0);
+end
 
-        [success,msg] = copyfile(noCraveFiles(j).name,strcat('../','Resources/',newFile),'f');   % Copy the new file to resources
-        if ~success
-            fprintf('Error: %s on nocrave file %2.0f\n',msg,j);
-        end
-        
-        WaitSecs(.01);
-    end
-    
-    cd('../');   % Back up to the main task directory
+% Shuffle within rating category
+vals = unique(sortedvals_g0);
+randidx = [];
 
-else    % Coin flip--other half of the time just copy the files into the Resources directory as the are
-    
-    [success,msg] = copyfile(strcat(craveDir,'/*'),'Resources','f');
-    if ~success
-        fprintf('Error: %s on crave file.\n',msg);
-    end
-        
-    [success,msg] = copyfile(strcat(noCraveDir,'/*'),'Resources','f');
-    if ~success
-        fprintf('Error: %s on nocrave file.\n',msg);
-    end
+for i = 1:length(vals)
+    val = vals(i);
+    validx = sortidx_g0(sortedvals_g0 == val);
+    temp = validx(randperm(length(validx)));
+    randidx = vertcat(randidx,temp);
+end
+
+% Select first and last n trials 
+craved = images(randidx(end-(n_craved-1):end));
+notcraved = images(randidx(1:n_notcraved));
+
+% Randomize images
+craved_rand = craved(randperm(length(craved)));
+notcraved_rand = notcraved(randperm(length(notcraved)));
+
+% Move craved foods to the Resources directory
+disp('Adding craved foods to Resource directory')
+for i = 1:length(craved_rand)
+  img = craved_rand{i};
+  category = img(1:regexp(img,'[0-9]{2}.jpg')-1);
+  copyfile(fullfile(homepath,'Stimuli',category,img), fullfile(homepath,'Resources',strcat('crave',num2str(i,'%02.0f'),'.jpg')));
+end
+
+% Move not craved foods to the Resources directory
+disp('Adding not craved foods to Resource directory')
+for i = 1:length(notcraved_rand)
+  img = notcraved_rand{i};
+  category = img(1:regexp(img,'[0-9]{2}.jpg')-1);
+  copyfile(fullfile(homepath,'Stimuli',category,img), fullfile(homepath,'Resources',strcat('nocrave',num2str(i,'%02.0f'),'.jpg')));
 end
