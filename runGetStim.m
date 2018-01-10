@@ -121,5 +121,6 @@ end
 
 % Save subject stimuli key in Output directory
 disp('Saving subject stimuli key to Output directory')
-output = fullfile(homepath,'Output',sprintf('%s%s_stimuli.mat',study,subjid));
+d = clock;
+output = fullfile(homepath,'Output',sprintf('%s_%s_stimuli_%s_%02.0f-%02.0f.mat',subjid,study,date,d(4),d(5)));
 save(output,'stimuli_key');
