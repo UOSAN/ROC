@@ -37,7 +37,7 @@ subinput = sprintf('%s/%s%s_ratings.csv',dxpath,study,subjid);
 % Load image rating info
 if exist(subinput)
     fid=fopen(subinput);
-    imageinfo = textscan(fid, '%n%s%s', 'Delimiter', ',');
+    imageinfo = textscan(fid, '%n%n%s', 'Delimiter', ',', 'treatAsEmpty','NULL', 'EmptyValue', NaN);
     fclose(fid);
 else
     error(sprintf('Subject input file (%s) does not exist',subinput));
@@ -56,13 +56,13 @@ delete(sprintf('%sResources/*crave*.jpg', homepath));
 %% Sort healthy foods into runs
 % Select healthy images
 ratings = imageinfo{1,1};
-idx = imageinfo{1,2};
+%idx = imageinfo{1,2};
 images = imageinfo{1,3};
 
 % Sort images by rating (ascending 1-4)
 [sortedvals, sortidx] = sort(ratings);
 
-% Check if there are enough trials with ratings 1-4 and exclude 0s
+% Check if there are enough trials with ratings 1-4 and exclude 0s and NaNs
 sumtrials = sum(sortedvals > 0);
 deficit = (n_craved + n_notcraved) - sumtrials;
 
