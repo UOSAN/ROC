@@ -28,8 +28,11 @@ n_craved = 40;
 n_notcraved = 20;
 
 %% Load image info
+% Define dropbox path
+dxpath = '/Users/Shared/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ImageSelection/output/Categorized';
+
 % Define subject input file
-subinput = sprintf('%sinput/%s%s_ratings.csv',homepath,study,subjid);
+subinput = sprintf('%s/%s%s_ratings.csv',dxpath,study,subjid);
 
 % Load image rating info
 if exist(subinput)
@@ -91,12 +94,18 @@ notcraved = images(randidx(1:n_notcraved));
 craved_rand = craved(randperm(length(craved)));
 notcraved_rand = notcraved(randperm(length(notcraved)));
 
+% Initialize stimuli key
+stimuli_key = {};
+
 % Move craved foods to the Resources directory
 disp('Adding craved foods to Resource directory')
 for i = 1:length(craved_rand)
   img = craved_rand{i};
   category = img(1:regexp(img,'[0-9]{2}.jpg')-1);
-  copyfile(fullfile(homepath,'Stimuli',category,img), fullfile(homepath,'Resources',strcat('crave',num2str(i,'%02.0f'),'.jpg')));
+  img_roc = strcat('crave',num2str(i,'%02.0f'),'.jpg');
+  copyfile(fullfile(homepath,'Stimuli',category,img), fullfile(homepath,'Resources',img_roc));
+  temp = {img_roc, img, category};
+  stimuli_key = vertcat(stimuli_key, temp);
 end
 
 % Move not craved foods to the Resources directory
@@ -104,5 +113,13 @@ disp('Adding not craved foods to Resource directory')
 for i = 1:length(notcraved_rand)
   img = notcraved_rand{i};
   category = img(1:regexp(img,'[0-9]{2}.jpg')-1);
-  copyfile(fullfile(homepath,'Stimuli',category,img), fullfile(homepath,'Resources',strcat('nocrave',num2str(i,'%02.0f'),'.jpg')));
+  img_roc = strcat('nocrave',num2str(i,'%02.0f'),'.jpg');
+  copyfile(fullfile(homepath,'Stimuli',category,img), fullfile(homepath,'Resources',img_roc));
+  temp = {img_roc, img, category};
+  stimuli_key = vertcat(stimuli_key, temp);
 end
+
+% Save subject stimuli key in Output directory
+disp('Saving subject stimuli key to Output directory')
+output = fullfile(homepath,'Output',sprintf('%s%s_stimuli.mat',study,subjid));
+save(output,'stimuli_key');
