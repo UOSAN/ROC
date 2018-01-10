@@ -6,9 +6,9 @@ Event information is specified in the `ROC_[].txt` files. Task information and p
 
 ## Key scripts
 **`runGetStim.m`** 
-This script selects subject most and least craved food categories and populates the Resource folder with the images from these food categories. User inputs include:
-- Study directory (i.e. path to ROC/)
-- Most and least craved food categories
+This script selects images based on the .csv file output from the Image Selection task and populates the Resource folder with the top 40 most craved and bottom 20 least craved images. The ratings file is expected to be in `'/Users/Shared/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ImageSelection/output/Categorized'` and named with the following format: `DEV999_ratings.csv`. A stimuli key for each subject (e.g. `DEV999_stimuli.mat`) is saved in `ROC/Output`. User inputs include:
+- Study name
+- Subject ID
 
 **`runROC_practice.m`**
 This script runs the practice task. The variables and paths should be modified for your study. User inputs include:
