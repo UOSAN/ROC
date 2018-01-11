@@ -1,12 +1,12 @@
-%% runImages.m %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% runGetStim.m %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Author: Dani Cosme
 %
 % Description: This script selects food images based on their ratings,
 % randomizes them, and adds the images to the ROC/Resources folder
 % 
-% Inputs: Ratings .csv file in [path tbd] with the following name:
-%   [study][subject ID]_ratings.csv (e.g. DEV999_ratings.csv)
+% Inputs: Ratings .csv file in dropbox path (defined below) with the 
+% following name: [study][subject ID]_ratings.csv (e.g. DEV999_ratings.csv)
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,7 +29,7 @@ n_notcraved = 20;
 
 %% Load image info
 % Define dropbox path
-dxpath = '/Users/Shared/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ImageSelection/output/Categorized';
+dxpath = '/Users/Shared/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ImageSelection/output/Categorized'; % check this
 
 % Define subject input file
 subinput = sprintf('%s/%s%s_ratings.csv',dxpath,study,subjid);
@@ -56,7 +56,6 @@ delete(sprintf('%sResources/*crave*.jpg', homepath));
 %% Sort healthy foods into runs
 % Select healthy images
 ratings = imageinfo{1,1};
-%idx = imageinfo{1,2};
 images = imageinfo{1,3};
 
 % Sort images by rating (ascending 1-4)
