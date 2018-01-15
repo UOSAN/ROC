@@ -41,10 +41,11 @@ output_folder = expt.output_folder;
 startToggle = expt.startToggle;
 
 % read in subject code
-subject_code=input('Enter subject code: ','s'); % the 's' tells input to take in a text string rather than a number
+subject_code=input('Subject number (3 digits):  ', 's'); % the 's' tells input to take in a text string rather than a number
+ssn_code=input('Session number (1-5):  ', 's'); % the 's' tells input to take in a text string rather than a number
 
 % read in input device
-button_box = input('Do you want to use the button box? [Enter 1 if yes, 0 if no]: ');
+button_box = input('MRI session? 0 = no, 1 = yes: ');
 
 if DEBUG
     button_box
@@ -318,10 +319,11 @@ end;
 d=clock; % read the clock information
 		 % this spits out an array of numbers from year to second
 
-output_filename=sprintf('%s_%s_%s_%s_%02.0f-%02.0f.mat',subject_code,experiment_code,tdfile,date,d(4),d(5));
+output_filename=sprintf('%s%s_%s_%s_%s_%02.0f-%02.0f.mat',experiment_code,subject_code,ssn_code,tdfile,date,d(4),d(5));
 
 % create a data structure with info about the run
 run_info.subject_code=subject_code;
+run_info.session_code=ssn_code;
 run_info.output_filename=output_filename;
 run_info.experiment_notes=experiment_notes;
 run_info.stimulus_input_file=tdfile;
@@ -342,8 +344,7 @@ save(output_filename,'run_info','key_presses');
 HideCursor;
 
 % Set up the onscreen window, and fill with black (0) (not white,255)
-Screen('Preference', 'SkipSyncTests', 1); % use if VBL fails; use this setting on the laptop
-%Screen('Preference', 'Verbosity', 1);
+Screen('Preference', 'Verbosity', 1);
 screens=Screen('Screens');
 screenNumber=max(screens);
 [w, rect]=Screen('OpenWindow', screenNumber,0,[],32,2);
@@ -818,6 +819,3 @@ experiment_output(output_filename,PRINT_OUTPUT); %Results will always print to s
 % move output files to output folder
 movefile(output_filename,output_folder);
 movefile([output_filename,'.txt'],output_folder);
-
-
-
