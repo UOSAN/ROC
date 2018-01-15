@@ -1,1 +1,163 @@
-%type	num	pre	maxTime	totTime	rep	stpEvt	bg	st	bgFile	stFile	h	v	tags	1	0	1.0111	1.0111	1	n	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave02.jpg	crave02.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral04.jpg	neutral04.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	1.2639	1.2639	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave16.jpg	crave16.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave11.jpg	crave11.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral08.jpg	neutral08.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	1.5167	1.5167	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave08.jpg	nocrave08.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	1.2639	1.2639	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave30.jpg	crave30.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	1.0111	1.0111	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave38.jpg	crave38.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	1.0111	1.0111	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave11.jpg	nocrave11.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	1.0111	1.0111	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave15.jpg	nocrave15.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	0.7583	0.7583	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave33.jpg	crave33.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave32.jpg	crave32.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave31.jpg	crave31.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral17.jpg	neutral17.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	1.2639	1.2639	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral16.jpg	neutral16.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	0.7583	0.7583	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave19.jpg	crave19.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave01.jpg	nocrave01.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	0.7583	0.7583	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral09.jpg	neutral09.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave29.jpg	crave29.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave15.jpg	crave15.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave18.jpg	nocrave18.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	1.5167	1.5167	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral13.jpg	neutral13.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave10.jpg	nocrave10.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	0.7583	0.7583	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave25.jpg	crave25.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	1.2639	1.2639	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave27.jpg	crave27.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	2.0223	2.0223	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral14.jpg	neutral14.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave05.jpg	crave05.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	0.7583	0.7583	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave19.jpg	nocrave19.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral12.jpg	neutral12.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave12.jpg	crave12.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	1.0111	1.0111	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave02.jpg	nocrave02.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave13.jpg	nocrave13.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	1.0111	1.0111	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave37.jpg	crave37.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	1.0111	1.0111	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave14.jpg	crave14.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave03.jpg	crave03.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	0.7583	0.7583	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3s	1	0	5	5	1	n	p	p	crave18.jpg	crave18.jpg			3s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			3s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral10.jpg	neutral10.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1s	1	0	5	5	1	n	p	p	neutral03.jpg	neutral03.jpg			1s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			1s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2s	1	0	5	5	1	n	p	p	nocrave05.jpg	nocrave05.jpg			2s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			2s	1	0	0.8847	0.8847	1	"""1234"""	p	p	fix.jpg	fix.jpg			s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4s	1	0	5	5	1	n	p	p	crave39.jpg	crave39.jpg			4s	1	0	4	4	1	"""1234"""	p	p	rate.jpg	rate.jpg			4s	1	0	0.5672	0.5672	1	"""1234"""	p	p	fix.jpg	fix.jpg			%							0		0	0			
+%type	num	pre	maxTime	totTime	rep	stpEvt	bg	st	bgFile	stFile	h	v	tag
+s	1	0	1.0111	1.0111	1	n	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave02.jpg	crave02.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral04.jpg	neutral04.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	1.2639	1.2639	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave16.jpg	crave16.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave11.jpg	crave11.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral08.jpg	neutral08.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	1.5167	1.5167	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave08.jpg	nocrave08.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	1.2639	1.2639	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave30.jpg	crave30.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	1.0111	1.0111	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave38.jpg	crave38.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	1.0111	1.0111	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave11.jpg	nocrave11.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	1.0111	1.0111	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave15.jpg	nocrave15.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	0.7583	0.7583	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave33.jpg	crave33.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave32.jpg	crave32.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave31.jpg	crave31.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral17.jpg	neutral17.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	1.2639	1.2639	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral16.jpg	neutral16.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	0.7583	0.7583	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave19.jpg	crave19.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave01.jpg	nocrave01.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	0.7583	0.7583	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral09.jpg	neutral09.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave29.jpg	crave29.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave15.jpg	crave15.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave18.jpg	nocrave18.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	1.5167	1.5167	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral13.jpg	neutral13.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave10.jpg	nocrave10.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	0.7583	0.7583	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave25.jpg	crave25.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	1.2639	1.2639	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave27.jpg	crave27.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	2.0223	2.0223	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral14.jpg	neutral14.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave05.jpg	crave05.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	0.7583	0.7583	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave19.jpg	nocrave19.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral12.jpg	neutral12.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave12.jpg	crave12.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	1.0111	1.0111	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave02.jpg	nocrave02.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave13.jpg	nocrave13.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	1.0111	1.0111	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave37.jpg	crave37.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	1.0111	1.0111	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave14.jpg	crave14.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave03.jpg	crave03.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	0.7583	0.7583	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			3
+s	1	0	5	5	1	n	p	p	crave18.jpg	crave18.jpg			3
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			3
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral10.jpg	neutral10.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			1
+s	1	0	5	5	1	n	p	p	neutral03.jpg	neutral03.jpg			1
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			1
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	look.jpg	look.jpg			2
+s	1	0	5	5	1	n	p	p	nocrave05.jpg	nocrave05.jpg			2
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			2
+s	1	0	0.8847	0.8847	1	"1234"	p	p	fix.jpg	fix.jpg			
+s	1	0	2	2	1	n	p	p	reappraise.jpg	reappraise.jpg			4
+s	1	0	5	5	1	n	p	p	crave39.jpg	crave39.jpg			4
+s	1	0	2.5	2.5	1	"1234"	p	p	rate.jpg	rate.jpg			4
+s	1	0	0.5672	0.5672	1	"1234"	p	p	fix.jpg	fix.jpg			
+%							0		0	0			
