@@ -34,7 +34,7 @@ n_notcraved = 20;
 
 %% Load image info
 % Define dropbox path
-dxpath = '/Users/Shared/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ImageSelection/output/Categorized'; % check this
+dxpath = '~/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ImageSelection/output/Categorized'; % check this
 
 % Define subject input file
 subinput = sprintf('%s/%s%s_ratings.csv',dxpath,study,subjid);
@@ -130,3 +130,6 @@ disp('Saving subject stimulus key to Output directory')
 d = clock;
 output = fullfile(homepath,'Output',sprintf('%s%s_%s_stimuli_%s_%02.0f-%02.0f.mat',study,subjid,ssnid,date,d(4),d(5)));
 save(output,'stimulus_key');
+
+% Clear output
+clear all; clc
