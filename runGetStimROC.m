@@ -23,8 +23,8 @@ homepath = [pwd '/'];
 rng('default')
 rng('shuffle')
 
-%% Get study and subject id from user
-study = input('Study name:  ', 's');
+%% Get study, subject id, and session number from user
+study = 'DEV'; %removed user input for convenience 
 subjid = input('Subject number (3 digits):  ', 's');
 ssnid = input('Session number (1-5):  ', 's');
 
