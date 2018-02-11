@@ -39,16 +39,13 @@ tdfile = expt.tdfile;
 resource_path = expt.resource_path;
 output_folder = expt.output_folder;
 startToggle = expt.startToggle;
+subject_code=expt.subject_code;
+ssn_code=expt.ssn_code;
+button_box=expt.MRI_code;
+run_code=expt.run_code;
 
 % Define dropbox path
 dropboxDir = '~/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ROC/output';
-
-% read in subject code
-subject_code=input('Subject number (3 digits):  ', 's'); % the 's' tells input to take in a text string rather than a number
-ssn_code=input('Session number (1-5):  ', 's'); % the 's' tells input to take in a text string rather than a number
-
-% read in input device
-button_box = input('MRI session? 0 = no, 1 = yes: ');
 
 if DEBUG
     button_box
@@ -324,8 +321,7 @@ end;
 
 d=clock; % read the clock information
 		 % this spits out an array of numbers from year to second
-runName = strsplit(tdfile,'scan.');
-output_filename=sprintf('%s%s_%s_%s_%s_%02.0f-%02.0f.mat',experiment_code,subject_code,ssn_code,runName{1},date,d(4),d(5));
+output_filename=sprintf('%s%s_%s_run%d_%s_%02.0f-%02.0f.mat',experiment_code,subject_code,ssn_code,run_code,date,d(4),d(5));
 
 % create a data structure with info about the run
 run_info.subject_code=subject_code;
