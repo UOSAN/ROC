@@ -4,6 +4,19 @@
 % MSS_RunMyMSS function. Modify this following variables for your experiment. 
 % This script should be saved in your experiment folder at the first level.
 
+%% User inputs
+expt.subject_code=input('Subject number (3 digits):  ', 's'); % the 's' tells input to take in a text string rather than a number
+expt.ssn_code=input('Session number (1-5):  ', 's'); % the 's' tells input to take in a text string rather than a number
+expt.MRI_code=input('MRI session? 0 = no, 1 = yes: ');
+
+if expt.MRI_code == 1
+    session_type='scan';
+    expt.run_code=0;
+else
+    session_type='beh';
+    expt.run_code=0;
+end
+
 %% Define experiment variables
 expt.experiment_name='DEV ROC Task Practice'; %Replace this with your experiment name
 expt.experiment_code='DEV'; %Replace this with a 3-4 letter code for your experiment

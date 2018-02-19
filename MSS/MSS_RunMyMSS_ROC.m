@@ -282,6 +282,9 @@ for k = 1:numDevices,
     elseif (strcmp(devices(k).transport,'Bluetooth') && strcmp(devices(k).usageName,'Keyboard')),
         homeDevice=k;
         fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
+    elseif (strcmp(devices(k).product,'Apple Internal Keyboard / Trackpad') && strcmp(devices(k).usageName,'Keyboard')),
+        homeDevice=k;
+        fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
     elseif (strcmp(devices(k).manufacturer,'Apple Inc.') && strcmp(devices(k).usageName,'Keyboard')),
         homeDevice=k;
         fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
@@ -310,6 +313,9 @@ else
             inputDevice=n;
             break,
         elseif strcmp(devices(n).transport,'ADB') && strcmp(devices(n).usageName,'Keyboard'),
+            inputDevice=n;
+            break,
+        elseif (strcmp(devices(n).transport,'SPI') && strcmp(devices(n).usageName,'Keyboard')),
             inputDevice=n;
         end;
     end;
