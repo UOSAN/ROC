@@ -264,38 +264,44 @@ end;
 
 
 %makes start device the control computer (see note below re: customizing to your computer)
-for k = 1:numDevices,
-    if DEBUG
-        fprintf('I got into the k = 1:numDevices loop\n')
-    end;
-    
-    if (strcmp(devices(k).transport,'USB') && strcmp(devices(k).usageName,'Keyboard') && strcmp(devices(k).product,'Apple Internal Keyboard / Trackpad')), %note: this is the name of my default device-- may need to be updated depending on your system
-        homeDevice=k;
+if button_box
+    for k = 1:numDevices
         if DEBUG
-            fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).product);
+            fprintf('I got into the k = 1:numDevices loop for MRI\n')
         end;
-        break,
-    elseif (strcmp(devices(k).transport,'USB') && strcmp(devices(k).usageName,'Keyboard')) && ~strcmp(devices(k).product,'Xkeys'),
-        homeDevice=k;
-        fprintf('Defaulting: Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).product);
-        break,
-    elseif (strcmp(devices(k).transport,'Bluetooth') && strcmp(devices(k).usageName,'Keyboard')),
-        homeDevice=k;
-        fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
-    elseif (strcmp(devices(k).product,'Apple Internal Keyboard / Trackpad') && strcmp(devices(k).usageName,'Keyboard')),
-        homeDevice=k;
-        fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
-    elseif (strcmp(devices(k).manufacturer,'Apple Inc.') && strcmp(devices(k).usageName,'Keyboard')),
-        homeDevice=k;
-        fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
+        if strcmp(devices(k).usageName,'Keyboard') && strcmp(devices(k).product,'Xkeys')
+            homeDevice=k;
+            fprintf('Defaulting: Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).product);
+            break,
+        end;
     end;
-end;
+else
+    for k = 1:numDevices
+        if DEBUG
+            fprintf('I got into the k = 1:numDevices loop for non-MRI\n')
+        end;
+        if strcmp(devices(k).transport,'USB') && strcmp(devices(k).usageName,'Keyboard') && strcmp(devices(k).product,'Apple Internal Keyboard / Trackpad') %note: this is the name of my default device-- may need to be updated depending on your system
+            homeDevice=k;
+            fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).product);
+            break,
+        elseif strcmp(devices(k).transport,'Bluetooth') && strcmp(devices(k).usageName,'Keyboard')
+            homeDevice=k;
+            fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
+        elseif strcmp(devices(k).product,'Apple Internal Keyboard / Trackpad') && strcmp(devices(k).usageName,'Keyboard')
+            homeDevice=k;
+            fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
+        elseif strcmp(devices(k).manufacturer,'Apple Inc.') && strcmp(devices(k).usageName,'Keyboard')
+            homeDevice=k;
+            fprintf('Home Device is #%d (%s)\n',homeDevice,devices(homeDevice).usageName);
+        end;
+    end;
+end
 
 %if button box was requested at start of experiment, use it, otherwise, use
 %the keyboard
-if button_box,
-    for n=1:numDevices,
-        if (strcmp(devices(n).transport,'USB') && strcmp(devices(n).usageName,'Keyboard') && strcmp(devices(n).product,'Xkeys')),
+if button_box
+    for n=1:numDevices
+        if strcmp(devices(n).usageName,'Keyboard') && strcmp(devices(n).product,'Xkeys')
             inputDevice=n;
                 fprintf('Using Device #%d (%s)\n',inputDevice,devices(inputDevice).product);
             break,
@@ -305,17 +311,14 @@ if button_box,
     trigger=([52]);
         
 else
-    for n=1:numDevices,
-        if (strcmp(devices(n).transport,'USB') && strcmp(devices(n).usageName,'Keyboard') && ~strcmp(devices(n).product,'Xkeys')),
+    for n=1:numDevices
+        if strcmp(devices(n).transport,'Bluetooth') && strcmp(devices(n).usageName,'Keyboard')
             inputDevice=n;
             break,
-        elseif (strcmp(devices(n).transport,'Bluetooth') && strcmp(devices(n).usageName,'Keyboard')),
+        elseif strcmp(devices(n).transport,'ADB') && strcmp(devices(n).usageName,'Keyboard')
             inputDevice=n;
             break,
-        elseif strcmp(devices(n).transport,'ADB') && strcmp(devices(n).usageName,'Keyboard'),
-            inputDevice=n;
-            break,
-        elseif (strcmp(devices(n).transport,'SPI') && strcmp(devices(n).usageName,'Keyboard')),
+        elseif strcmp(devices(n).transport,'SPI') && strcmp(devices(n).usageName,'Keyboard')
             inputDevice=n;
         end;
     end;
