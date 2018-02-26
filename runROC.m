@@ -16,6 +16,7 @@ else
     session_type='beh';
     expt.run_code=input('Run number (1-2):  ');
 end
+
 %% Define experiment variables
 expt.experiment_name='DEV ROC Task'; %Replace this with your experiment name
 expt.experiment_code='DEV'; %Replace this with a 3-4 letter code for your experiment
