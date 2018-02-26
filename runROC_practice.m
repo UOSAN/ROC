@@ -5,8 +5,8 @@
 % This script should be saved in your experiment folder at the first level.
 
 %% User inputs
-expt.subject_code=input('Subject number (3 digits):  ', 's'); % the 's' tells input to take in a text string rather than a number
-expt.ssn_code=input('Session number (1-5):  ', 's'); % the 's' tells input to take in a text string rather than a number
+expt.subject_code='999'; % the 's' tells input to take in a text string rather than a number
+expt.ssn_code='0'; % the 's' tells input to take in a text string rather than a number
 expt.MRI_code=input('MRI session? 0 = no, 1 = yes: ');
 
 if expt.MRI_code == 1
