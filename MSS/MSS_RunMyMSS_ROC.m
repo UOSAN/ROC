@@ -318,6 +318,9 @@ else
         elseif strcmp(devices(n).transport,'ADB') && strcmp(devices(n).usageName,'Keyboard')
             inputDevice=n;
             break,
+        elseif strcmp(devices(n).transport,'USB') && strcmp(devices(n).usageName,'Keyboard')
+            inputDevice=n;
+            break,
         elseif strcmp(devices(n).transport,'SPI') && strcmp(devices(n).usageName,'Keyboard')
             inputDevice=n;
         end;
@@ -348,7 +351,9 @@ run_info.trial_order=trial_order;
 run_info.tag=tag;
 
 % save the data to the desired file
-save(output_filename,'run_info','key_presses');
+if run_code > 0
+    save(output_filename,'run_info','key_presses');
+end
 
 %% Setup initial screen & display settings
 
@@ -613,7 +618,9 @@ for j = 1:number_of_trials,
         run_info.rt=rt;
 
         % save the data to the desired file
-        save(output_filename,'run_info','key_presses');
+        if run_code > 0
+            save(output_filename,'run_info','key_presses');
+        end
         
     else
         if st(i) == 't' %primary stimulus is text
@@ -697,7 +704,9 @@ for j = 1:number_of_trials,
         run_info.rt=rt;
     
         % save the data to the desired file
-        save(output_filename,'run_info','key_presses');
+        if run_code > 0
+            save(output_filename,'run_info','key_presses');
+        end
 
         %wait for a response, or for the trial to end (whichever comes first)
         no_response_yet=1;
@@ -818,19 +827,27 @@ key_presses.key = clean_output(key_presses.key);
 % cd(output_folder);
 
 % save the final, cleaned data to the desired file
-save(output_filename,'run_info','key_presses');
+if run_code > 0
+    save(output_filename,'run_info','key_presses');
+end
 
 % after everything is done, clear the screen
 Screen('CloseAll'); % Close all screens, return to windows.
 ShowCursor;
 
 %print a report
-experiment_output(output_filename,PRINT_OUTPUT); %Results will always print to screen, PRINT_OUTPUT determines whether gets saved to txt file as well
+if run_code > 0
+    experiment_output(output_filename,PRINT_OUTPUT); %Results will always print to screen, PRINT_OUTPUT determines whether gets saved to txt file as well
+end
 
 % copy files to dropbox
-copyfile(output_filename, dropboxDir);
-disp(sprintf('Output file copied to %s',dropboxDir));
+if run_code > 0
+    copyfile(output_filename, dropboxDir);
+    disp(sprintf('Output file copied to %s',dropboxDir));
+end
 
 % move output files to output folder
-movefile(output_filename,output_folder);
-movefile([output_filename,'.txt'],output_folder);
+if run_code > 0
+    movefile(output_filename,output_folder);
+    movefile([output_filename,'.txt'],output_folder);
+end
