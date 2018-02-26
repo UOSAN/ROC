@@ -12,9 +12,11 @@ expt.MRI_code=input('MRI session? 0 = no, 1 = yes: ');
 if expt.MRI_code == 1
     session_type='scan';
     expt.run_code=input('Run number (1-4):  ');
+    expt.default_start='scan_start.jpg';
 else
     session_type='beh';
     expt.run_code=input('Run number (1-2):  ');
+    expt.default_start='exp_start.jpg';
 end
 
 %% Define experiment variables
@@ -25,7 +27,6 @@ expt.script_revision_date='2/11/2018'; %Replace with the date you last revised y
 expt.tdfile=sprintf('ROC_R%d%s.txt',expt.run_code,session_type); %Replace with the name of your td file
 expt.resource_path='Resources'; %Replace with the path for your resource folder
 expt.output_folder='Output'; %Replace with the path for your output folder
-expt.default_start='scan_start.jpg'; %Replace if you'd like to use an image other than default_start.jpg
 expt.kid_start='kid_start.jpg'; %Replace if you'd like to use an image other than kid_start.jpg
 expt.startToggle=0; %Default is 0; use 1 for a user-specified version
 
