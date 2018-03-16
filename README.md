@@ -15,15 +15,12 @@ This script runs the practice task. The variables and paths should be modified f
 - Subject ID
 - Whether or not to use the MRI button box
 
-**`runROC_[run number]scan.m`**
-This script runs the scanner task. The variables and paths should be modified for your study. User inputs include:
+**`runROC.m`**
+This script runs both the scanner and behavioral tasks. If in the scanner, there will be 4 runs. If behavioral, there will be 2 runs. The variables and paths should be modified for your study. User inputs include:
 - Subject ID
+– Session number
 - Whether or not to use the MRI button box
-
-**`runROC_[run number]beh.m`**
-This script runs the behavioral task. The variables and paths should be modified for your study. User inputs include:
-- Subject ID
-- Whether or not to use the MRI button box
+– Run number
 
 ## Output
 Files are saved to the `ROC/Output` directory. 
