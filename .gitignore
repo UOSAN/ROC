@@ -1,2 +1,6 @@
 .DS_Store
 Output/*
+Resources/crave*jpg
+Resources/nocrave*jpg
+ROC*.py
+
