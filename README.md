@@ -5,7 +5,7 @@
 The Regulation of Craving (ROC) task presents image stimuli of foods that are rated for craving.
 
 - Conditions: pictures of food, where the food is either neutral, in a category that the participant self-reports they crave, or in a category that the participant self-reports they do not crave.
-- Trial structure: Fixation cross (~1s), cue indicating look or reappraisal (2s), stimulus (5s), 1-5 rating (4s) => 12s/trial.  
+- Trial structure: Fixation cross (~1s or ~5s), cue indicating look or reappraisal (2s), stimulus (5s), 1-5 rating (2.5s) => 10.5 or 14.5s/trial.  
 
 ## How to run the task
 
