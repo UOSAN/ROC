@@ -21,7 +21,7 @@ The Regulation of Craving (ROC) task presents image stimuli of foods that are ra
 
 The task starts by displaying instruction text. The instruction text is displayed until the user presses one of the response buttons, in the behavioral version, or the trigger signal is received from the MRI, in the scanner version. The instruction text for the behavioral version is:
 ```
-The task is about to being.
+The task is about to begin.
 Get ready!
 ```
 In the scanner version it is:
