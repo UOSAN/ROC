@@ -3,4 +3,5 @@ Output/*
 Resources/crave*jpg
 Resources/nocrave*jpg
 ROC*.py
-
+html/lib/
+.idea/
