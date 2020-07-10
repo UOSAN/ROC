@@ -9,13 +9,8 @@ The Regulation of Craving (ROC) task presents image stimuli of foods that are ra
 
 ## How to run the task
 
-1. Launch the PsychoPy Builder.
-2. Open the file `ROC.psyexp`.
-3. Start the experiment by selecting the Tools -> Run menu item or click the run icon:
-
-![run icon](./run_icon.png)
-
-4. Fill in the subject number, the session number, and the run number. Sessions 1 and 2 are in-scanners sessions, while sessions 3, 4, and 5 are behavioral sessions. Specifying run number of 0 will run a practice version of the task. The task will start automatically after that.
+1. When this task is run online, via pavlovia.org, make sure that a participant-specific folder, containing the craved and non-craved food images, has been created in the `html/` folder. This can be done by starting the Python version of the task and moving the images crave\*.jpg and nocrave\*.jpg images from the `Resources` folder. Then, these changes have to be pushed to gitlab.pavlovia.org. 
+2. Create the experiment URL with a query string that specifies the participant number, the session number, and the run number. For example, for participant 888, in session 3, performing run number 1, the URL must include `participant=888&session=3&run_number=1`. After this URL is accessed, the images will be downloaded to the particpants computer, then the task will start automatically.
 
 ## Task description
 
