@@ -34,8 +34,8 @@ n_notcraved = 20;
 
 %% Load image info
 % Define input and ouput dropbox path
-dxpath = '~/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ImageSelection/output/Categorized'; % check this
-dxpathout = '~/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ROC/output';
+dxpath = '~/Dropbox (University of Oregon)/UO-SAN Lab/Berkman Lab/Devaluation/Tasks/ImageSelection/output/Categorized'; % check this
+dxpathout = '~/Dropbox (University of Oregon)/UO-SAN Lab/Berkman Lab/Devaluation/Tasks/ROC/output';
 
 % Define subject input file
 subinput = sprintf('%s/%s%s_ratings.csv',dxpath,study,subjid);
