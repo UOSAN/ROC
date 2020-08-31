@@ -45,7 +45,7 @@ button_box=expt.MRI_code;
 run_code=expt.run_code;
 
 % Define dropbox path
-dropboxDir = '~/Dropbox (PfeiBer Lab)/Devaluation/Tasks/ROC/output';
+dropboxDir = '~/Dropbox (University of Oregon)/UO-SAN Lab/Berkman Lab/Devaluation/Tasks/ROC/output';
 
 if DEBUG
     button_box
