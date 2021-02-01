@@ -25,6 +25,7 @@ function MSS_RunMyMSS_ROC(expt)
 
 %% Set up variables for subject info and script info
 
+clear PsychHID;
 DEBUG = 0;
 PRINT_OUTPUT = 1; %Results will always print to screen, PRINT_OUTPUT determines whether gets saved to txt file as well
 
